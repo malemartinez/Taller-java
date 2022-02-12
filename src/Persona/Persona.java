@@ -11,6 +11,10 @@ public class Persona {
     final static int BP = -1;
     final static int PI = 0;
     final static int SP = 1;
+    final static String[] letrasDNI = {
+            "T", "R", "W","A","G","M","Y","F","P","D","X","B","N","J",
+            "Z", "S", "Q","V","H","L","C","K","E"
+    };
 
     public Persona(String nombre, int edad,char sexo, double peso, double altura) {
         this.nombre = nombre;
@@ -36,6 +40,7 @@ public class Persona {
     //metodos
     public int CalcularIMC() {
         double IMC = (this.peso / (Math.pow(this.altura, 2)));
+        System.out.println("Tu valor IMC: " + (int) IMC);
         if (IMC < 20) {
             System.out.println("Bajo de peso");
             return BP;
@@ -47,7 +52,7 @@ public class Persona {
             return SP;
         }else {
             System.out.println("No hay datos para sacar el IMC");
-            return 0;
+            return 2;
         }
 
     }
@@ -62,6 +67,7 @@ public class Persona {
             System.out.println("Estas muy chiquis aun");
             return  false;
         }
+
     }
 
     private char comprobarSexo(char sexo){
@@ -70,23 +76,24 @@ public class Persona {
                 return 'M';
             default: return 'H';
         }
+
     }
     public String toString(){
-        String mensaje = "Nombre: " + this.nombre + "\nEdad: " + this.edad + "\nSexo: " + this.sexo + "\nPeso: " + this.peso + "\nAltura: " + this.altura + "\nDNI: " + this.DNI;
+        String mensaje = "Nombre: " + this.nombre +
+                "\nEdad: " + this.edad + "\nSexo: " + this.sexo
+                + "\nPeso: " + this.peso + "\nAltura: " + this.altura
+                + "\nDNI: " + this.DNI;
         System.out.println(mensaje);
         return mensaje;
     }
 
     private String generaDNI(){
-        String Numbers = "";
-        String DIN = "";
-        for (int i = 0; i < 8; i++) {
-            int number = (int) Math.floor((Math.random()*9)); //numero aleatorio
-            char number1 = (char) (number + 65); //lo paso a char
-            DIN = Numbers.concat(Character.toString(number1)); //lo concateno en otra variable
-            Numbers = DIN;
-        }
-        return DIN;
+        //(int)(Math.random()*(HASTA-DESDE+1)+DESDE);
+        int number = (int) Math.floor((Math.random()*(99999999 - 10000000)+ 10000000)); //numero aleatorio
+        int mod = number % 23;
+        String letra = letrasDNI[mod];
+        DNI = number + "-"+ letra;
+        return DNI;
     }
 
     public void setNombre(String nombre) {
