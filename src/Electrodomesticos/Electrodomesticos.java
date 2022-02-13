@@ -5,24 +5,24 @@ import static Electrodomesticos.AvailableColors.*;
 
 public class Electrodomesticos {
 
-    protected int BasePrice;
+    protected double BasePrice;
     protected String color;
     protected char energyConsume;
     protected double weight;
 
     static final AvailableColors COLOR= blanco;
     static final EnergyConsume ENERGYCONSUME= F ;
-    static final int BASEPRICE= 100;
+    static final double BASEPRICE= 100;
     static final double WEIGHT= 5;
 
-    public Electrodomesticos(int basePrice, AvailableColors color, EnergyConsume energyConsume, double weight) {
+    public Electrodomesticos(double basePrice, AvailableColors color, EnergyConsume energyConsume, double weight) {
         this.BasePrice = basePrice;
         this.color = this.comprobarColor(color);
         this.energyConsume = this.comprobarConsumoEnergetico(energyConsume);
         this.weight = weight;
     }
 
-    public Electrodomesticos(int basePrice, double weight ){
+    public Electrodomesticos(double basePrice, double weight ){
         this.BasePrice = basePrice;
         this.weight = weight;
         this.color = String.valueOf(COLOR);
@@ -35,7 +35,7 @@ public class Electrodomesticos {
         this.weight = WEIGHT;
     }
     //metodos get de todos los atributos
-    public int getBasePrice() {
+    public double getBasePrice() {
         return BasePrice;
     }
 
@@ -72,10 +72,10 @@ public class Electrodomesticos {
         return colorFinal;
     }
 
-    public int precioFinal(){
+    public double precioFinal(){
        EnergyConsume letra =EnergyConsume.valueOf (String.valueOf((this.energyConsume)));
-       int precio = letra.getPrice();
-       int precioFinal = 0;
+       double precio = letra.getPrice();
+       double precioFinal = 0;
        if(this.weight <= 19){
            precioFinal = precio + this.BasePrice + 10;
        }else if(this.weight >= 20 && this.weight <= 49 ){
