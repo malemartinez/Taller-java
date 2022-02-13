@@ -78,13 +78,17 @@ public class Persona {
         }
 
     }
-    public String toString(){
-        String mensaje = "Nombre: " + this.nombre +
-                "\nEdad: " + this.edad + "\nSexo: " + this.sexo
-                + "\nPeso: " + this.peso + "\nAltura: " + this.altura
-                + "\nDNI: " + this.DNI;
-        System.out.println(mensaje);
-        return mensaje;
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", DNI='" + DNI + '\'' +
+                ", sexo=" + sexo +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                '}';
     }
 
     //https://www.letranif.com/formula-para-calcular-nif/
