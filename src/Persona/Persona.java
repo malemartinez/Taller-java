@@ -87,13 +87,13 @@ public class Persona {
         return mensaje;
     }
 
+    //https://www.letranif.com/formula-para-calcular-nif/
     private String generaDNI(){
         //(int)(Math.random()*(HASTA-DESDE+1)+DESDE);
         int number = (int) Math.floor((Math.random()*(99999999 - 10000000)+ 10000000)); //numero aleatorio
         int mod = number % 23;
         String letra = letrasDNI[mod];
-        DNI = number + "-"+ letra;
-        return DNI;
+        return number + "-"+ letra;
     }
 
     public void setNombre(String nombre) {

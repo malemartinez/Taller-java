@@ -8,13 +8,13 @@ public class Television extends Electrodomesticos{
     final double RESOLUCION = 20;
     final boolean SINTONIZADOR = false;
 
-    public Television(int basePrice, AvailableColors color, EnergyConsume energyConsume, double weight, double resolucion, boolean sintonizadorTDT) {
+    public Television(double basePrice, AvailableColors color, EnergyConsume energyConsume, double weight, double resolucion, boolean sintonizadorTDT) {
         super(basePrice, color, energyConsume, weight);
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
     }
 
-    public Television(int basePrice, double weight) {
+    public Television(double basePrice, double weight) {
         super(basePrice, weight);
         this.resolucion = RESOLUCION;
         this.sintonizadorTDT = SINTONIZADOR;

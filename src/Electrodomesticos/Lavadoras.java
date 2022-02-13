@@ -5,12 +5,12 @@ public class Lavadoras extends Electrodomesticos{
 
     final static int CARGA = 5;
 
-    public Lavadoras(int basePrice, AvailableColors color, EnergyConsume energyConsume, double weight, int carga) {
+    public Lavadoras(double basePrice, AvailableColors color, EnergyConsume energyConsume, double weight, int carga) {
         super(basePrice, color, energyConsume, weight);
         this.carga = carga;
     }
 
-    public Lavadoras(int basePrice, double weight ) {
+    public Lavadoras(double basePrice, double weight ) {
         super(basePrice, weight);
         this.carga = CARGA;
     }
