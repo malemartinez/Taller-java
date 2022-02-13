@@ -83,6 +83,11 @@ public class Series implements Entregable {
 
     @Override
     public boolean compareTo(Object a) {
-        return false;
+        Series b = (Series) a;
+        boolean equal = false;
+        if (this.temporadas > b.getTemporadas()) {
+            equal = true;
+        }
+        return equal;
     }
 }

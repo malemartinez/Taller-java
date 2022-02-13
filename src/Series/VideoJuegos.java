@@ -84,6 +84,11 @@ public class VideoJuegos implements Entregable {
 
     @Override
     public boolean compareTo(Object a) {
-        return false;
+        VideoJuegos b = (VideoJuegos) a;
+        boolean equal = false;
+        if (this.horas > b.getHoras()) {
+            equal = true;
+        }
+        return equal;
     }
 }
