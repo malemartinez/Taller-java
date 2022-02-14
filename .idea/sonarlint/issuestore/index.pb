@@ -17,11 +17,25 @@ C
 src/PhraseTrim.java,d\1\d18120600b3686b38d7815d276397a9b21c8f674
 @
 src/DoWhile.java,1\f\1fea8828900d2d088cde1f81cbd51a8e63a61d4c
-G
-src/LettersCounter.java,7\b\7bf917acc02eeb0267e202bb057c454acaafda6d
 H
 src/NumbersTwoToTwo.java,2\5\25ccf9ed1dc859383e0a786594e574595b9e48a5
 A
 src/MenuCine.java,8\5\855d12784f0425625e1bb3d77b1681abe6012605
 E
 src/Persona/Main.java,a\c\ac43bb00e2486c2d0fccca7a7b25038ea89191bb
+X
+(src/Electrodomesticos/EnergyConsume.java,d\6\d6842d4548f52e64df5f270350b26bf9e6cbd1dc
+Z
+*src/Electrodomesticos/AvailableColors.java,b\4\b412ed789790db2ace6d45f8bf5e63687216e161
+U
+%src/Electrodomesticos/Television.java,1\6\16edb8b690725c66372e7da543d046d84c913827
+T
+$src/Electrodomesticos/Lavadoras.java,d\c\dc567edb192eb24f50a7c1dc1018221e8427fe2d
+O
+src/Electrodomesticos/Main.java,8\5\857a726b071df8f67d54d58385ea986d1fdbcac8
+\
+,src/Electrodomesticos/Electrodomesticos.java,e\5\e5350e0de4acd23ce48a7faeb6eb12ed0ef969cf
+J
+src/Series/Entregable.java,b\b\bbcc7d6fc53b03096f509ddcb3b75094b31bd372
+H
+src/Persona/Persona.java,e\7\e76908c3e522ca3bec0babbdeb87c5d56a2833bf
